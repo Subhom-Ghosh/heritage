@@ -1,100 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>West Bengal Travel Planner</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <header class="hero-section">
-        <div class="hero-content">
-            <h1>Plan Your West Bengal Adventure</h1>
-            <p>Discover hidden gems and create your perfect itinerary with our Smart Travel Planner.</p>
-        </div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
     </header>
-
+    <section class="hero-text">
+  <h1>Plan Your West Bengal Adventure</h1>
+  <p>
+    Discover hidden gems and create your perfect itinerary with our Smart
+    Travel Planner.
+  </p>
+</section>
     <main>
-        <section id="planner" class="container planner-section">
-            <h2>Your Smart Travel Planner</h2>
-            <form id="travel-planner-form">
-                <p>Simply enter your preferences below and we'll suggest a custom plan for you!</p>
-                <div class="form-group">
-                    <label for="budget">Budget (INR):</label>
-                    <input type="number" id="budget" name="budget" required placeholder="e.g., 10000">
-                </div>
-                <div class="form-group">
-                    <label for="place">Preferred Region:</label>
-                    <select id="place" name="place">
-                        <option value="Birbhum">Birbhum</option>
-                        <option value="Malda">Malda</option>
-                        <option value="Cooch Behar">Cooch Behar</option>
-                        <option value="Darjeeling">Darjeeling</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="time">Time Required (days):</label>
-                    <input type="number" id="time" name="time" required placeholder="e.g., 4">
-                </div>
-                <button type="submit">Get My Plan 🚀</button>
-            </form>
-            <div id="plan-output"></div>
-        </section>
+      <section id="planner" class="container planner-section">
+        <h2>Your Smart Travel Planner</h2>
+        <form id="travel-planner-form">
+          <p>
+            Simply enter your preferences below and we'll suggest a custom plan
+            for you!
+          </p>
+          <div class="form-group">
+            <label for="budget">Budget (INR):</label>
+            <input
+              type="number"
+              id="budget"
+              name="budget"
+              required
+              placeholder="e.g., 10000"
+            />
+          </div>
+          <div class="form-group">
+            <label for="place">Preferred Region:</label>
+            <select id="place" name="place">
+              <option value="Birbhum">Birbhum</option>
+              <option value="Malda">Malda</option>
+              <option value="Cooch Behar">Cooch Behar</option>
+              <option value="Darjeeling">Darjeeling</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="time">Time Required (days):</label>
+            <input
+              type="number"
+              id="time"
+              name="time"
+              required
+              placeholder="e.g., 4"
+            />
+          </div>
+          <button type="submit">Get My Plan 🚀</button>
+        </form>
+        <div id="plan-output"></div>
+      </section>
 
-        <section id="places" class="container">
-            <h2>Explore Hidden Heritage Places</h2>
-            <div class="card-grid">
-                </div>
-        </section>
+      <section id="places" class="container">
+        <h2>Explore Hidden Heritage Places</h2>
+        <div class="card-grid"></div>
+      </section>
 
-        <section id="kutir-shilpo" class="container">
-            <h2>Kutir Shilpo (Cottage Industry)</h2>
-            <div class="kutir-grid">
-                </div>
-        </section>
+      <section id="kutir-shilpo" class="container">
+        <h2>Kutir Shilpo (Cottage Industry)</h2>
+        <div class="kutir-grid"></div>
+      </section>
 
-        <section id="gi-tag" class="container">
-            <h2>GI Tag Certified Products</h2>
-            <div class="gi-grid">
-                </div>
-        </section>
+      <section id="gi-tag" class="container">
+        <h2>GI Tag Certified Products</h2>
+        <div class="gi-grid"></div>
+      </section>
 
-        <button id="festive-mode-toggle" class="secondary-btn">Festive Mode 🎊</button>
+      <button id="festive-mode-toggle" class="secondary-btn">
+        Festive Mode 🎊
+      </button>
     </main>
 
     <div class="chatbot-container">
-        <div class="chatbot-header">
-            <h3>Travel Bot</h3>
-            <button id="chatbot-close-btn">&times;</button>
+      <div class="chatbot-header">
+        <h3>Travel Bot</h3>
+        <button id="chatbot-close-btn">&times;</button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot-message">
+          Hello! How can I help you plan your trip?
         </div>
-        <div class="chatbot-messages" id="chatbot-messages">
-            <div class="message bot-message">Hello! How can I help you plan your trip?</div>
-        </div>
-        <form id="chatbot-form">
-            <input type="text" id="chatbot-input" placeholder="Type your message...">
-            <button type="submit">Send</button>
-        </form>
-        <button id="chatbot-toggle-btn">💬</button>
+      </div>
+      <form id="chatbot-form">
+        <input
+          type="text"
+          id="chatbot-input"
+          placeholder="Type your message..."
+        />
+        <button type="submit">Send</button>
+      </form>
+      <button id="chatbot-toggle-btn">💬</button>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h4>Contact Us</h4>
-                <p>Email: info@hiddenheritage.com</p>
-                <p>Phone: +91 98765 43210</p>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+      <div class="footer-content">
+        <div class="contact-info">
+          <h4>Contact Us</h4>
+          <p>Email: info@hiddenheritage.com</p>
+          <p>Phone: +91 98765 43210</p>
         </div>
-        <p>&copy; 2025 Hidden Heritage of West Bengal. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p>&copy; 2025 Hidden Heritage of West Bengal. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
