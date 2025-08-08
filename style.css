@@ -54,7 +54,7 @@ h2 {
 
 /* --- Hero Section --- */
 .hero-section {
-    background-image: url('https://st4.depositphotos.com/8322640/41829/v/450/depositphotos_418295762-stock-illustration-vector-cartoon-illustration-kolkata-skyline.jpg'); /* Placeholder image */
+    background-image: url(Beige\ Minimalist\ Personal\ Business\ LinkedIn\ Banner.png); /* Placeholder image */
     background-size: cover;
     background-position: center;
     height: 50vh;
@@ -87,7 +87,7 @@ h2 {
     background-color: var(--planner-bg);
     border-radius: 10px;
     box-shadow: var(--box-shadow);
-    margin-top: -50px; /* Overlaps with the hero section for a smooth transition */
+     /* Overlaps with the hero section for a smooth transition */
     position: relative;
     z-index: 2;
     padding: 3rem 2rem;
